@@ -10,7 +10,7 @@ while found == 0
     
     % If the magnitude of the position is outside the sphere reject it 
     % if inside the sphere keep it and end
-    if sqrt(sqrt(rand_X^2+rand_Y^2+ rand_Z^2)) < R 
+    if sqrt(rand_X^2+rand_Y^2+ rand_Z^2) < R 
         X = rand_X;
         Y = rand_Y;
         Z = rand_Z;

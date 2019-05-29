@@ -1,4 +1,4 @@
-N = 10000; % Number of particles
+N = 1000; % Number of particles
 K = 1.38E-23; % Boltzmann constant in Joules
 T = 300; % Temperature in Kelvin   
 m_p = 1.66E-27; % Mass Proton Kg
@@ -35,7 +35,12 @@ end
 
 particles(:,1) = vel(:);
 particles(:,2) = Prob(:);
-subplot(2,1,1)
-scatter(particles(:,1),particles(:,2))
-subplot(2,1,2)
-hist(particles(:,1))
+%subplot(2,1,1)
+scatter(particles(:,1),particles(:,2),'.')
+%subplot(2,1,2)
+grid on
+title('Maxwell Boltzmann Distribution of Velocities','FontSize', 13)
+xlabel('Velocity (m/s)','FontSize', 13 )
+ylabel('Probability P(v)','FontSize', 13)
+xlim([0 4500])
+%hist(particles(:,1))

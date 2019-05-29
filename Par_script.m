@@ -8,10 +8,10 @@ Par.Set_Temperature_Particle( 300)
 Par.Set_Random_Factor(1);
 Par.Set_Temperture_Loss_Constant( .005);
 % Par.Run_Particle(.5);
-
+% 
 for idx = 1:Sample_Size
-    
-    Par.Quick_Run(5);
+%    Par.Run_Particle(1)
+    Par.Quick_Run(1);
     Surface_Collisons(idx) = Par.Surface_Collisons;
     Final_Temperature(idx) = Par.Temperature;
     clear Par

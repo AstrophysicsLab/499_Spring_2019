@@ -15,7 +15,7 @@ classdef  Particles< handle
         Direction;
         Direction_Theta;
         Wall_Collisons = 0;
-        Bugfinder = 'Its reset!!!!!!!'
+        Bugfinder = 'Bug Found'
         Surface_Collisons = 0;
         Origin = [0,0,0]
         dt;

@@ -1,5 +1,6 @@
 
-R = 1;  %1 meter 
+R = 1;  %1 meter
+R = 0.3048;  % 12 inches
 X_0 = R/sqrt(2);
 Y_0 = X_0;
 XY = [X_0, Y_0];

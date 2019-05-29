@@ -1,4 +1,4 @@
-function Velocities = Generate_Random_Velocities(N, T, m)
+function [Velocities, Probabilities] = Generate_Random_Velocities(N, T, m)
 %Generate_Random_Velocities 
 %   Generates random Maxwell-Boltzmann Distribution of velocities 
 %   using a Monte Carlo rejection method given the number of particles 
@@ -18,12 +18,13 @@ Max_P_v = max(Distribution_Values);
 
 velocities = zeros(N,1);
 Probability = zeros(N,1);
-parfor idx =1:N
+for idx =1:N
     
   [velocities(idx), Probability(idx)] = MC_MaxwellBoltzmann(f_v,Velocity_upper_Limit,Max_P_v);
 end
 
 Velocities = velocities;
+Probabilities = Probability;
 % f = figure('visible','off');
 % subplot(2,1,1)
 % scatter(Velocities(:),Probability(:))
